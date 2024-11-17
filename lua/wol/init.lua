@@ -39,6 +39,8 @@ M.search_bible = function (ref)
     end)
 
     vim.api.nvim_buf_set_lines(popup.bufnr, 0, 1, false, buf_lines)
+    vim.api.nvim_buf_set_option(popup.bufnr, 'wrap', true)
+    vim.api.nvim_buf_set_option(popup.bufnr, 'linebreak', true)
 end
 
 return M
